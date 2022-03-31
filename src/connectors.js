@@ -7,13 +7,13 @@ const injected = new InjectedConnector({
 });
 
 const walletconnect = new WalletConnectConnector({
-  rpcUrl: `https://mainnet.infura.io/v3/48b78f5c4c9549f188f759146e20cde8`,
+  rpcUrl: `https://mainnet.infura.io/v3/${process.env.INFURA_KEY}`,
   bridge: "https://bridge.walletconnect.org",
   qrcode: true
 });
 
 const walletlink = new WalletLinkConnector({
-  url: `https://mainnet.infura.io/v3/48b78f5c4c9549f188f759146e20cde8`,
+  url: `https://mainnet.infura.io/v3/${process.env.INFURA_KEY}`,
   appName: "web3-react-demo"
 });
 
